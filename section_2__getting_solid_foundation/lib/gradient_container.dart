@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:foundation/gretting_text.dart';
+
+var startAlignment = Alignment.topLeft;
+var endAlignment = Alignment.bottomRight;
 
 class GradientContainer extends StatelessWidget {
   const GradientContainer({super.key});
@@ -6,17 +10,14 @@ class GradientContainer extends StatelessWidget {
   @override
   Widget build(context) {
     return Container(
-      decoration: const BoxDecoration(
+      decoration: BoxDecoration(
         gradient: LinearGradient(
-            colors: [Colors.blue, Colors.purple],
-            begin: Alignment.topLeft,
-            end: Alignment.bottomRight),
+            colors: const [Colors.blue, Colors.purple],
+            begin: startAlignment,
+            end: endAlignment),
       ),
       child: const Center(
-        child: Text(
-          "Hello World !",
-          style: TextStyle(color: Colors.white, fontSize: 28),
-        ),
+        child: GrettingText(),
       ),
     );
   }
