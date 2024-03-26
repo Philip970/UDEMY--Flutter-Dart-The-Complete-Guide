@@ -16,9 +16,16 @@ class GradientContainer extends StatelessWidget {
         gradient: LinearGradient(
             colors: colors, begin: startAlignment, end: endAlignment),
       ),
-      child: const Center(
-        child: GrettingText("Bonjour le monde !"),
-      ),
+      child: Center(
+          child: Column(
+        children: [
+          Image.asset(
+            "assets/images/dice-2.png",
+            width: 200,
+          ),
+          TextButton(onPressed: () {}, child: const Text("Roll Dice"))
+        ],
+      )),
     );
   }
 }
